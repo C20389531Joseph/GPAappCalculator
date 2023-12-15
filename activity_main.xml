@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for the main activity -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Button to add rows -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/addButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textSize="30sp" />
+
+                <!-- Button to calculate GPA -->
+                <Button
+                    android:id="@+id/calculateButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calculate GPA" />
+            </LinearLayout>
+
+            <!-- Layout for adding rows dynamically -->
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <!-- Text view to display GPA result -->
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="16dp" />
+
+            <!-- Button to take a screenshot (initially hidden) -->
+            <Button
+                android:id="@+id/screenshotButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Take Screenshot"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- New UI elements for Spinner and EditTexts -->
+    <Spinner
+        android:id="@+id/creditsSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:layout_marginEnd="8dp"
+        android:entries="@array/credit_options"/>
+
+    <!-- EditText for grade percentage -->
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:hint="Grade (%)"
+        android:inputType="number"
+        android:layout_marginEnd="8dp"/>
+
+    <!-- EditText for module name -->
+    <EditText
+        android:id="@+id/moduleNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:hint="Module Name"/>
+
+</RelativeLayout>

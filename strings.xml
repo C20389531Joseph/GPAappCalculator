@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MSDassignment</string>
+    <string-array name="credit_options">
+        <item>5</item>
+        <item>10</item>
+    </string-array>
+</resources>
